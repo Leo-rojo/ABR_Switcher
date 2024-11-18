@@ -19,11 +19,15 @@ The video_size are already provided without the need to donwload them.
 the state produced by each step is a 11-dim array:
 `last_throughput, past_chunk_download_times, buffer_size, nr_remaining_chunk, valid_past_action, chunk_size_idx0, csi1, csi2, csi3, csi4, csi5`
 where:
-total chunk: 490, chunk size is in bytes, troughput is in bytes/seconds, buffer_size is in seconds, download time is in seconds, valid_past_action: 0-5, bitratemap in Mbps: [0.3, 0.75, 1.2, 1.85, 2.85, 4.3]
+total chunk: 490, chunk size is in bytes, troughput is in bytes/seconds, download_times in seconds, buffer_size is in seconds, download time is in seconds, valid_past_action: 0-5, bitratemap in Mbps: [0.3, 0.75, 1.2, 1.85, 2.85, 4.3]
 The folder 'Park_test' contains two files, one called `ABR.py` which shows how to create a custo ABR agent, in this case a dummby ABR that select the next action randomly, while 'Park_test.py' shows how to use the environment
 with the custom agent.
 If you use park, please remember to cite using the following citation:
 `Hongzi Mao et al. 2019. Park: an open platform for learning-augmented computer systems. Proceedings of the 33rd International Conference on Neural Information Processing Systems. Curran Associates Inc., Red Hook, NY, USA, Article 224, 2494–2506.`
+
+## ABRs
+#### ThroughputRule Sabre
+https://github.com/UMass-LIDS/sabre
 
 ###  Waterloo-IV brief description
 The Waterloo-IV dataset consists of 1,350 streaming videos, covering all combinations of five source videos, 
